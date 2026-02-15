@@ -487,4 +487,902 @@
                     Exclusive content, behind the scenes, and direct interaction daily.
                 </p>
                 
-                <div class="flex flex-wrap justify-center gap-4 mb-12
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <div class="badge badge-gold"><i class="fas fa-crown"></i> Top Creator 2026</div>
+                    <div class="badge badge-purple"><i class="fas fa-verified"></i> Verified</div>
+                    <div class="badge badge-green"><i class="fas fa-bolt"></i> Active Now</div>
+                </div>
+
+                <div class="flex justify-center gap-4">
+                    <button onclick="scrollToSection('platforms')" class="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all font-medium shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transform hover:scale-105">
+                        Explore Platforms
+                    </button>
+                    <button onclick="showSchedule()" class="px-8 py-4 rounded-full glass hover:bg-white/10 transition-all font-medium border border-white/20">
+                        View Schedule
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Status Ticker -->
+            <div class="glass rounded-2xl p-4 mb-12 overflow-hidden">
+                <div class="flex items-center gap-4 animate-marquee whitespace-nowrap">
+                    <span class="text-green-400"><i class="fas fa-circle text-xs mr-2"></i>LIVE NOW</span>
+                    <span class="text-gray-400">|</span>
+                    <span>Playing Valorant with viewers</span>
+                    <span class="text-gray-400">|</span>
+                    <span class="text-purple-400">Next stream: Tomorrow 8PM EST</span>
+                    <span class="text-gray-400">|</span>
+                    <span>New YouTube video dropping in 2 hours</span>
+                    <span class="text-gray-400">|</span>
+                    <span>Discord Nitro giveaway this weekend</span>
+                </div>
+            </div>
+
+            <!-- Social Cards Grid -->
+            <div id="platforms" class="grid md:grid-cols-3 gap-8 mb-20">
+                
+                <!-- YouTube Card -->
+                <div id="youtube" class="social-card tilt-card glass rounded-3xl p-8 relative overflow-hidden group cursor-pointer" onclick="openLink('https://youtube.com')">
+                    <div class="spotlight"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/20 rounded-full blur-3xl group-hover:bg-red-500/30 transition-all"></div>
+                    <div class="relative z-10 tilt-content">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-red-500/30">
+                                <i class="fab fa-youtube text-3xl text-white"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-red-400">85.2K</div>
+                                <div class="text-xs text-gray-400">Subscribers</div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">YouTube</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Video content, tutorials, and vlogs. New uploads every week.</p>
+                        
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-gray-500">Latest Video</span>
+                                <span class="text-green-400">2 hours ago</span>
+                            </div>
+                            <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full bg-red-500 w-3/4 rounded-full"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">@YourChannel</span>
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-red-500 transition-colors">
+                                <i class="fas fa-arrow-right text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discord Card -->
+                <div id="discord" class="social-card tilt-card glass rounded-3xl p-8 relative overflow-hidden group cursor-pointer" onclick="openLink('https://discord.com')">
+                    <div class="spotlight"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/20 rounded-full blur-3xl group-hover:bg-indigo-500/30 transition-all"></div>
+                    <div class="relative z-10 tilt-content">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-700 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-indigo-500/30">
+                                <i class="fab fa-discord text-3xl text-white"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-indigo-400">12.5K</div>
+                                <div class="text-xs text-gray-400">Members</div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Discord</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Join the conversation. Chat, voice channels, and exclusive roles.</p>
+                        
+                        <div class="flex gap-2 mb-4 flex-wrap">
+                            <span class="px-2 py-1 rounded bg-indigo-500/20 text-xs text-indigo-300">Gaming</span>
+                            <span class="px-2 py-1 rounded bg-purple-500/20 text-xs text-purple-300">Art</span>
+                            <span class="px-2 py-1 rounded bg-pink-500/20 text-xs text-pink-300">Music</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                                <span class="text-xs text-gray-400">234 online now</span>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-indigo-500 transition-colors">
+                                <i class="fas fa-arrow-right text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram Card -->
+                <div id="instagram" class="social-card tilt-card glass rounded-3xl p-8 relative overflow-hidden group cursor-pointer" onclick="openLink('https://instagram.com')">
+                    <div class="spotlight"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl group-hover:bg-pink-500/30 transition-all"></div>
+                    <div class="relative z-10 tilt-content">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-pink-500/30">
+                                <i class="fab fa-instagram text-3xl text-white"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-pink-400">45.8K</div>
+                                <div class="text-xs text-gray-400">Followers</div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Instagram</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Daily stories, reels, and behind-the-scenes content.</p>
+                        
+                        <div class="grid grid-cols-3 gap-2 mb-4">
+                            <div class="aspect-square rounded-lg bg-white/5 flex items-center justify-center text-xs text-gray-400">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="aspect-square rounded-lg bg-white/5 flex items-center justify-center text-xs text-gray-400">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="aspect-square rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center text-xs text-pink-300">
+                                +42
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">@yourhandle</span>
+                            <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-pink-500 transition-colors">
+                                <i class="fas fa-arrow-right text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Platforms Row -->
+            <div class="grid md:grid-cols-2 gap-8 mb-20">
+                <!-- Twitter/X Card -->
+                <div id="twitter" class="social-card tilt-card glass rounded-3xl p-6 relative overflow-hidden group cursor-pointer" onclick="openLink('https://twitter.com')">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center border border-white/20">
+                            <i class="fab fa-x-twitter text-2xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold">Twitter / X</h3>
+                            <p class="text-sm text-gray-400">Daily thoughts and updates</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold">28.3K</div>
+                            <div class="text-xs text-gray-500">Followers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TikTok Card -->
+                <div id="tiktok" class="social-card tilt-card glass rounded-3xl p-6 relative overflow-hidden group cursor-pointer" onclick="openLink('https://tiktok.com')">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-2xl bg-black flex items-center justify-center">
+                            <i class="fab fa-tiktok text-2xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold">TikTok</h3>
+                            <p class="text-sm text-gray-400">Short form viral content</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xl font-bold">120.5K</div>
+                            <div class="text-xs text-gray-500">Followers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Schedule Timeline -->
+            <div class="glass rounded-3xl p-8 mb-12">
+                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <i class="fas fa-calendar-alt text-purple-400"></i>
+                    Content Schedule
+                </h2>
+                <div class="space-y-6">
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <h4 class="font-bold text-lg">Monday</h4>
+                            <span class="text-xs px-2 py-1 rounded bg-red-500/20 text-red-300">YouTube</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Weekly Vlog & Behind the Scenes</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <h4 class="font-bold text-lg">Wednesday</h4>
+                            <span class="text-xs px-2 py-1 rounded bg-indigo-500/20 text-indigo-300">Discord</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Community Game Night & Voice Chat</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <h4 class="font-bold text-lg">Friday</h4>
+                            <span class="text-xs px-2 py-1 rounded bg-pink-500/20 text-pink-300">Instagram</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Q&A Stories & Fan Art Features</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="flex justify-between items-start mb-1">
+                            <h4 class="font-bold text-lg">Saturday</h4>
+                            <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">Live</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Weekly Livestream - All Platforms</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Dashboard -->
+            <div class="glass rounded-3xl p-8 mb-12">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold">Analytics Dashboard</h2>
+                    <button onclick="refreshStats()" class="text-sm text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-sync-alt mr-1"></i> Refresh
+                    </button>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors cursor-pointer" onclick="showStatDetail('views')">
+                        <div class="text-3xl font-bold text-purple-400 mb-1 counter" data-target="5000000">0</div>
+                        <div class="text-sm text-gray-400">Total Views</div>
+                        <div class="text-xs text-green-400 mt-1"><i class="fas fa-arrow-up"></i> 12%</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors cursor-pointer" onclick="showStatDetail('followers')">
+                        <div class="text-3xl font-bold text-pink-400 mb-1 counter" data-target="312000">0</div>
+                        <div class="text-sm text-gray-400">Total Followers</div>
+                        <div class="text-xs text-green-400 mt-1"><i class="fas fa-arrow-up"></i> 8%</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors cursor-pointer" onclick="showStatDetail('engagement')">
+                        <div class="text-3xl font-bold text-blue-400 mb-1">4.8%</div>
+                        <div class="text-sm text-gray-400">Engagement</div>
+                        <div class="text-xs text-green-400 mt-1"><i class="fas fa-arrow-up"></i> 2%</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors cursor-pointer" onclick="showStatDetail('content')">
+                        <div class="text-3xl font-bold text-green-400 mb-1 counter" data-target="487">0</div>
+                        <div class="text-sm text-gray-400">Posts</div>
+                        <div class="text-xs text-gray-400 mt-1">This month: 24</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Showcase -->
+            <div class="glass rounded-3xl p-8 mb-12">
+                <h2 class="text-2xl font-bold mb-6">Achievements</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center p-4 rounded-2xl bg-gradient-to-b from-yellow-500/20 to-transparent border border-yellow-500/20">
+                        <i class="fas fa-trophy text-3xl text-yellow-400 mb-2"></i>
+                        <div class="text-sm font-bold">100K Subs</div>
+                        <div class="text-xs text-gray-400">YouTube Silver</div>
+                    </div>
+                    <div class="text-center p-4 rounded-2xl bg-gradient-to-b from-purple-500/20 to-transparent border border-purple-500/20">
+                        <i class="fas fa-star text-3xl text-purple-400 mb-2"></i>
+                        <div class="text-sm font-bold">Partner</div>
+                        <div class="text-xs text-gray-400">Twitch Verified</div>
+                    </div>
+                    <div class="text-center p-4 rounded-2xl bg-gradient-to-b from-blue-500/20 to-transparent border border-blue-500/20">
+                        <i class="fas fa-check-circle text-3xl text-blue-400 mb-2"></i>
+                        <div class="text-sm font-bold">Verified</div>
+                        <div class="text-xs text-gray-400">All Platforms</div>
+                    </div>
+                    <div class="text-center p-4 rounded-2xl bg-gradient-to-b from-pink-500/20 to-transparent border border-pink-500/20">
+                        <i class="fas fa-heart text-3xl text-pink-400 mb-2"></i>
+                        <div class="text-sm font-bold">Top 1%</div>
+                        <div class="text-xs text-gray-400">Creator Economy</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter / Contact -->
+            <div class="glass rounded-3xl p-8 text-center max-w-2xl mx-auto relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 opacity-0 hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-4">Stay in the Loop</h3>
+                    <p class="text-gray-400 mb-6">Get exclusive updates, early access to content, and join the inner circle.</p>
+                    <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input type="email" id="emailInput" placeholder="Enter your email" required
+                            class="flex-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-purple-500 transition-colors text-white placeholder-gray-500">
+                        <button type="submit" 
+                            class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all font-medium shadow-lg shadow-purple-500/30 whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-500 mt-4" id="subscribeStatus">Join 5,000+ subscribers. No spam, ever.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 glass-strong mt-20 py-12 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h4 class="font-bold mb-4">SocialHub</h4>
+                <p class="text-sm text-gray-400">Connecting creators with their communities through innovative digital experiences.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Platforms</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">YouTube</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Discord</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Resources</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Brand Kit</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Press Kit</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Collaborations</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Connect</h4>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/20 transition-all">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/20 transition-all">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2026 SocialHub. Crafted with <i class="fas fa-heart text-red-400 mx-1"></i> for the community.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 glass-strong px-6 py-4 rounded-2xl transform translate-y-24 transition-transform duration-300 z-50 flex items-center gap-3 border border-white/10">
+        <i class="fas fa-check-circle text-green-400" id="toastIcon"></i>
+        <span id="toastMessage">Background updated!</span>
+    </div>
+
+    <!-- Modal for Stats -->
+    <div id="statModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeStatModal()"></div>
+        <div class="glass-strong rounded-3xl p-8 max-w-lg w-full relative z-10 transform scale-95 opacity-0 transition-all duration-300" id="statModalContent">
+            <button onclick="closeStatModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-4" id="modalTitle">Statistics</h3>
+            <div id="modalBody" class="space-y-4">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            const loaderBar = document.getElementById('loaderBar');
+            
+            loaderBar.style.width = '100%';
+            
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                initParticles();
+                animateCounters();
+            }, 1000);
+        });
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+            
+            // Navbar transparency
+            const navbar = document.getElementById('navbar');
+            if (winScroll > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Particle System
+        function initParticles() {
+            const canvas = document.getElementById('particleCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const particleCount = 50;
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 0.5;
+                    this.speedX = Math.random() * 1 - 0.5;
+                    this.speedY = Math.random() * 1 - 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                }
+
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+
+                    if (this.x > canvas.width) this.x = 0;
+                    if (this.x < 0) this.x = canvas.width;
+                    if (this.y > canvas.height) this.y = 0;
+                    if (this.y < 0) this.y = canvas.height;
+                }
+
+                draw() {
+                    ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                // Connect particles
+                particles.forEach((a, index) => {
+                    particles.slice(index + 1).forEach(b => {
+                        const dx = a.x - b.x;
+                        const dy = a.y - b.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+
+                        if (distance < 100) {
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * (1 - distance / 100)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.beginPath();
+                            ctx.moveTo(a.x, a.y);
+                            ctx.lineTo(b.x, b.y);
+                            ctx.stroke();
+                        }
+                    });
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Cursor Effects
+        const cursorGlow = document.querySelector('.cursor-glow');
+        const cursorTrail = document.querySelector('.cursor-trail');
+
+        document.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = e.clientX - 10 + 'px';
+            cursorGlow.style.top = e.clientY - 10 + 'px';
+            
+            setTimeout(() => {
+                cursorTrail.style.left = e.clientX - 20 + 'px';
+                cursorTrail.style.top = e.clientY - 20 + 'px';
+            }, 100);
+        });
+
+        document.addEventListener('mousedown', () => {
+            cursorGlow.style.transform = 'scale(0.8)';
+        });
+
+        document.addEventListener('mouseup', () => {
+            cursorGlow.style.transform = 'scale(1)';
+        });
+
+        // 3D Tilt Effect
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                // Spotlight effect
+                const spotlight = card.querySelector('.spotlight');
+                if (spotlight) {
+                    spotlight.style.left = x - 100 + 'px';
+                    spotlight.style.top = y - 100 + 'px';
+                    spotlight.style.opacity = '1';
+                }
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                const spotlight = card.querySelector('.spotlight');
+                if (spotlight) {
+                    spotlight.style.opacity = '0';
+                }
+            });
+        });
+
+        // Background Upload with Effects
+        function handleBackgroundUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const customBg = document.getElementById('customBg');
+                    const defaultBg = document.getElementById('backgroundLayer');
+                    
+                    customBg.style.backgroundImage = `url(${e.target.result})`;
+                    customBg.classList.remove('opacity-0');
+                    customBg.classList.add('opacity-100');
+                    
+                    defaultBg.style.opacity = '0';
+                    
+                    // Add blur effect based on intensity
+                    const intensity = document.querySelector('input[type="range"]')?.value || 50;
+                    customBg.style.filter = `blur(${intensity / 20}px)`;
+                    
+                    showToast('Custom background applied!', 'success');
+                    localStorage.setItem('customBackground', e.target.result);
+                    localStorage.setItem('bgEffect', 'custom');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Preset Backgrounds
+        function setPresetBackground(type) {
+            const customBg = document.getElementById('customBg');
+            const defaultBg = document.getElementById('backgroundLayer');
+            
+            const presets = {
+                gradient: 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)',
+                dark: '#0a0a0a',
+                blue: 'linear-gradient(to bottom, #1e3c72, #2a5298)'
+            };
+            
+            if (type === 'gradient') {
+                defaultBg.style.opacity = '1';
+                customBg.classList.add('opacity-0');
+                customBg.classList.remove('opacity-100');
+            } else {
+                customBg.style.background = presets[type];
+                customBg.style.backgroundImage = 'none';
+                customBg.classList.remove('opacity-0');
+                customBg.classList.add('opacity-100');
+                defaultBg.style.opacity = '0';
+            }
+            
+            localStorage.setItem('bgEffect', type);
+            showToast(`Applied ${type} theme`, 'success');
+        }
+
+        function updateEffects(value) {
+            const customBg = document.getElementById('customBg');
+            if (!customBg.classList.contains('opacity-0')) {
+                customBg.style.filter = `blur(${value / 20}px) brightness(${0.5 + (value / 200)})`;
+            }
+        }
+
+        function resetBackground() {
+            const customBg = document.getElementById('customBg');
+            const defaultBg = document.getElementById('backgroundLayer');
+            
+            customBg.classList.remove('opacity-100');
+            customBg.classList.add('opacity-0');
+            customBg.style.backgroundImage = '';
+            customBg.style.background = '';
+            customBg.style.filter = '';
+            
+            defaultBg.style.opacity = '1';
+            
+            localStorage.removeItem('customBackground');
+            localStorage.removeItem('bgEffect');
+            showToast('Reset to default', 'info');
+        }
+
+        // Check saved background
+        window.addEventListener('load', () => {
+            const savedBg = localStorage.getItem('customBackground');
+            const bgEffect = localStorage.getItem('bgEffect');
+            
+            if (savedBg && bgEffect === 'custom') {
+                const customBg = document.getElementById('customBg');
+                const defaultBg = document.getElementById('backgroundLayer');
+                
+                customBg.style.backgroundImage = `url(${savedBg})`;
+                customBg.classList.remove('opacity-0');
+                customBg.classList.add('opacity-100');
+                defaultBg.style.opacity = '0';
+            } else if (bgEffect && bgEffect !== 'custom') {
+                setPresetBackground(bgEffect);
+            }
+        });
+
+        // Confetti Effect
+        function confettiEffect() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#f0932b', '#eb4d4b', '#6c5ce7'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confetti.style.opacity = Math.random();
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => confetti.remove(), 4000);
+            }
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Theme Toggle
+        let isDark = true;
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('themeIcon');
+            
+            if (isDark) {
+                body.style.filter = 'invert(1) hue-rotate(180deg)';
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                body.style.filter = 'none';
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+            isDark = !isDark;
+        }
+
+        // Music Toggle (Simulated)
+        let isPlaying = false;
+        function toggleMusic() {
+            const visualizer = document.getElementById('visualizer');
+            const icon = document.getElementById('musicIcon');
+            const btn = document.getElementById('musicBtn');
+            
+            isPlaying = !isPlaying;
+            
+            if (isPlaying) {
+                visualizer.style.opacity = '1';
+                icon.style.opacity = '0';
+                btn.classList.add('ring-2', 'ring-purple-500');
+                showToast('Music visualizer active', 'success');
+            } else {
+                visualizer.style.opacity = '0.5';
+                icon.style.opacity = '1';
+                btn.classList.remove('ring-2', 'ring-purple-500');
+            }
+        }
+
+        // Toast Notification
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+            
+            toastMessage.textContent = message;
+            
+            if (type === 'error') {
+                toastIcon.className = 'fas fa-exclamation-circle text-red-400';
+            } else if (type === 'info') {
+                toastIcon.className = 'fas fa-info-circle text-blue-400';
+            } else {
+                toastIcon.className = 'fas fa-check-circle text-green-400';
+            }
+            
+            toast.classList.remove('translate-y-24');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-24');
+            }, 3000);
+        }
+
+        // Link Handler
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString();
+                    }
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                observer.observe(counter);
+            });
+        }
+
+        // Refresh Stats
+        function refreshStats() {
+            const btn = event.target.closest('button');
+            btn.classList.add('animate-spin');
+            setTimeout(() => btn.classList.remove('animate-spin'), 1000);
+            showToast('Stats refreshed!', 'success');
+        }
+
+        // Stat Detail Modal
+        function showStatDetail(type) {
+            const modal = document.getElementById('statModal');
+            const content = document.getElementById('statModalContent');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            const details = {
+                views: {
+                    title: 'View Analytics',
+                    content: `
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center p-3 rounded-xl bg-white/5">
+                                <span>This Week</span>
+                                <span class="font-bold text-purple-400">125K views</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-xl bg-white/5">
+                                <span>This Month</span>
+                                <span class="font-bold text-purple-400">580K views</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-xl bg-white/5">
+                                <span>All Time</span>
+                                <span class="font-bold text-purple-400">5.2M views</span>
+                            </div>
+                            <div class="h-32 rounded-xl bg-white/5 flex items-end justify-around p-4 gap-2">
+                                <div class="w-8 bg-purple-500/50 rounded-t" style="height: 40%"></div>
+                                <div class="w-8 bg-purple-500/50 rounded-t" style="height: 65%"></div>
+                                <div class="w-8 bg-purple-500/50 rounded-t" style="height: 45%"></div>
+                                <div class="w-8 bg-purple-500 rounded-t" style="height: 85%"></div>
+                                <div class="w-8 bg-purple-500/50 rounded-t" style="height: 60%"></div>
+                            </div>
+                        </div>
+                    `
+                },
+                followers: {
+                    title: 'Follower Growth',
+                    content: '<p class="text-gray-400">Detailed follower analytics across all platforms...</p>'
+                },
+                engagement: {
+                    title: 'Engagement Rate',
+                    content: '<p class="text-gray-400">Likes, comments, shares breakdown...</p>'
+                },
+                content: {
+                    title: 'Content Library',
+                    content: '<p class="text-gray-400">Total posts, videos, and stories...</p>'
+                }
+            };
+            
+            title.textContent = details[type].title;
+            body.innerHTML = details[type].content;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeStatModal() {
+            const modal = document.getElementById('statModal');
+            const content = document.getElementById('statModalContent');
+            
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Schedule Viewer
+        function showSchedule() {
+            document.getElementById('platforms').scrollIntoView({ behavior: 'smooth' });
+            showToast('Check out the timeline below!', 'info');
+        }
+
+        // Scroll to Section
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Email Subscription
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const status = document.getElementById('subscribeStatus');
+            
+            if (email) {
+                status.textContent = '✓ Successfully subscribed! Welcome aboard.';
+                status.className = 'text-xs text-green-400 mt-4';
+                document.getElementById('emailInput').value = '';
+                confettiEffect();
+                showToast('Welcome to the community!', 'success');
+            }
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeStatModal();
+                document.getElementById('mobileMenu').classList.add('hidden');
+            }
+            if (e.key === 'm' && e.ctrlKey) {
+                e.preventDefault();
+                toggleMusic();
+            }
+        });
+
+        // Typewriter Effect for Status
+        const statusTexts = [
+            'Currently streaming on Twitch',
+            'Editing new YouTube video',
+            'Active on Discord',
+            'Posting on Instagram'
+        ];
+        let statusIndex = 0;
+        
+        setInterval(() => {
+            const el = document.getElementById('statusText');
+            el.style.opacity = '0';
+            setTimeout(() => {
+                statusIndex = (statusIndex + 1) % statusTexts.length;
+                el.textContent = statusTexts[statusIndex];
+                el.style.opacity = '1';
+            }, 300);
+        }, 5000);
+    </script>
+</body>
+</html>
